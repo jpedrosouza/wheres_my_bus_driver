@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="messages_text" type="id" />
+    <item name="entry_update_text" type="id" />
+</resources>

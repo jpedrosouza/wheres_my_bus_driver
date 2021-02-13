@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paginaLocalizacao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0984E3"
+    tools:context=".activitys.LocalizationActivity">
+
+    <TextView
+        android:id="@+id/textTitulo3"
+        android:layout_width="359dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="300dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Where's My Bus? Driver"
+        android:textAlignment="center"
+        android:textColor="#FDCB6E"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="346dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="470dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Transmita em tempo real a sua localização"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textColorHint="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitulo3" />
+
+    <TextView
+        android:id="@+id/textApresentacao"
+        android:layout_width="360dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="330dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Caro motorista, ao transmitir sua localização em tempo real, você ajuda outras pessoas a localizarem seus ônibus com uma maior precisão e assim melhorando a vida de quem utiliza o transporte público."
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <View
+        android:id="@+id/div_proposta"
+        android:layout_width="263dp"
+        android:layout_height="138dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/border_localizacao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textApresentacao"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <Button
+        android:id="@+id/buttonSim"
+        android:layout_width="65dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_sim"
+        android:elevation="2px"
+        android:onClick="startService"
+        android:shadowColor="#0C0C0C"
+        android:text="SIM"
+        app:layout_constraintBottom_toBottomOf="@+id/div_proposta"
+        app:layout_constraintEnd_toEndOf="@+id/div_proposta"
+        app:layout_constraintStart_toStartOf="@+id/div_proposta"
+        app:layout_constraintTop_toTopOf="@+id/div_proposta" />
+
+    <Button
+        android:id="@+id/buttonNao"
+        android:layout_width="65dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_nao"
+        android:onClick="stopService"
+        android:text="NÃO"
+        app:layout_constraintBottom_toBottomOf="@+id/div_proposta"
+        app:layout_constraintEnd_toEndOf="@+id/div_proposta"
+        app:layout_constraintStart_toStartOf="@+id/div_proposta"
+        app:layout_constraintTop_toTopOf="@+id/div_proposta" />
+
+    <TextView
+        android:id="@+id/textPergunta"
+        android:layout_width="228dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Você aceita transmitir sua  localização em tempo real?"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/div_proposta"
+        app:layout_constraintStart_toStartOf="@+id/div_proposta"
+        app:layout_constraintTop_toTopOf="@+id/div_proposta" />
+
+    <TextView
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="99dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:width="70dp"
+        android:background="@drawable/border"
+        android:fontFamily="@font/lato_bold"
+        android:onClick="sairLogin"
+        android:text="Voltar"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div_proposta" />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="79dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="90dp"
+        android:editable="false"
+        android:fontFamily="@font/lato_bold"
+        android:text="DESLIGADA"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div_proposta" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="77dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="120dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Localização:"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div_proposta" />
+</androidx.constraintlayout.widget.ConstraintLayout>
