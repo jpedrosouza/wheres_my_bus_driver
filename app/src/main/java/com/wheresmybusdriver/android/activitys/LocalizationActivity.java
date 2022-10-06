@@ -47,7 +47,7 @@ public class LocalizationActivity<global> extends AppCompatActivity {
         Permissions.check(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION,
                         Manifest.permission.ACCESS_FINE_LOCATION},
                 "É necessário que você autorize o uso de sua Localização", new Permissions.Options()
-                        .setSettingsDialogTitle("Marning!").setRationaleDialogTitle("Atenção!"),
+                        .setSettingsDialogTitle("Warning!").setRationaleDialogTitle("Atenção!"),
                 new PermissionHandler() {
                     @SuppressLint("SetTextI18n")
                     @Override
